@@ -9,23 +9,23 @@ export class EmployeeService {
 
 
   getData(){
-    return this.httpClient.get('http://localhost:3000/api/employees')
+    return this.httpClient.get('https://backened-curd-meanstack.onrender.com/api/employees')
   }
 
 
   insertData(data: any){
-    return this.httpClient.post('http://localhost:3000/api/employee/add',data)
+    return this.httpClient.post('https://backened-curd-meanstack.onrender.com/api/employee/add',data)
   }
 
   getDataById(id: string){  
-    return this.httpClient.get('http://localhost:3000/api/employee/'+id);
+    return this.httpClient.get('https://backened-curd-meanstack.onrender.com/api/employee/'+id);
   }
 
   updateData(id: string,data: Partial<{ name: string | null; email: string | null; salary: string | null; }>){
-    return this.httpClient.put('http://localhost:3000/api/employee/edit/'+id,data)
+    return this.httpClient.put('https://backened-curd-meanstack.onrender.com/api/employee/edit/'+id,data)
   }
 
   deleteData({ id }: { id: string; }){
-    return this.httpClient.delete('http://localhost:3000/api/employee/'+id);
+    return this.httpClient.delete('https://backened-curd-meanstack.onrender.com/api/employee/'+id);
   }
 }
